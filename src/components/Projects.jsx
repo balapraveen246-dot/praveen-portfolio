@@ -34,9 +34,12 @@ const ICON_MAP = {
 export default function Projects() {
   const [filter, setFilter] = useState('all');
 
+  const liveCount = projectsData.filter((p) => p.status === 'Live').length;
+  const inProgressCount = projectsData.filter((p) => p.status !== 'Live').length;
+
   const filteredProjects = projectsData.filter((project) => {
     if (filter === 'live') return project.status === 'Live';
-    if (filter === 'progress') return project.status === 'In Progress' || project.status === 'Unavailable';
+    if (filter === 'progress') return project.status !== 'Live';
     return true;
   });
 
@@ -79,7 +82,7 @@ export default function Projects() {
                   : 'text-text-secondary hover:text-text-main'
               }`}
             >
-              Live Demos (5)
+              Live Demos ({liveCount})
             </button>
             <button
               onClick={() => setFilter('progress')}
@@ -89,7 +92,7 @@ export default function Projects() {
                   : 'text-text-secondary hover:text-text-main'
               }`}
             >
-              In Progress & Notes (2)
+              In Progress ({inProgressCount})
             </button>
           </div>
         </div>

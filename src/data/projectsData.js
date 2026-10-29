@@ -89,21 +89,18 @@ export const projectsData = [
   {
     id: 'grand-horizon',
     name: 'Grand Horizon',
-    category: 'Hotel Booking Interface',
-    description: 'A hotel booking interface project.',
-    tags: ['React', 'Hotel UI', 'Booking System'],
-    // Supplied URL: https://grandhorizon-indol.vercel.app/booking
-    // Verified status: 404 Not Found. Configured with 'Unavailable' state per instructions.
-    liveUrl: null,
-    suppliedUrl: 'https://grandhorizon-indol.vercel.app/booking',
+    category: 'Hotel Booking & Resort Interface',
+    description: 'A modern hotel booking and resort website showcasing accommodations, amenities, and room discovery.',
+    tags: ['React', 'Hotel UI', 'Tailwind CSS', 'Vercel'],
+    liveUrl: 'https://grandhorizon-indol.vercel.app/',
     codeUrl: null,
-    status: 'Unavailable',
-    statusBadge: 'Demo Unavailable (URL 404)',
+    status: 'Live',
+    statusBadge: 'Live Demo Available',
     gradient: 'from-amber-950/30 via-neutral-900 to-neutral-950',
     accentColor: '#EAB308',
     iconType: 'building',
     number: '06',
-    features: ['Room discovery UI', 'Booking inquiry flow', 'Date & guest selection']
+    features: ['Room discovery UI', 'Amenities showcase', 'Responsive resort layout']
   },
   {
     id: 'medical-website',
