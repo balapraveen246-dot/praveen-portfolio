@@ -1,31 +1,25 @@
 /**
  * Centralized Configuration for Praveen's Portfolio
- * 
- * INSTRUCTIONS FOR USER:
- * 1. Replace 'YOUR_WHATSAPP_NUMBER' with your real phone number in international format,
- *    digits only, no '+' sign or spaces (e.g., '919876543210' for India).
- * 2. Replace 'YOUR_EMAIL@example.com' with your actual contact email address.
- * 3. Update GitHub or social profile URLs as desired.
+ * Updated with verified real contact details.
  */
 
 export const CONTACT_CONFIG = {
-  // Configurable WhatsApp Number (international format, digits only)
-  // E.g. '919876543210'
-  whatsappNumber: 'YOUR_WHATSAPP_NUMBER',
+  // WhatsApp Number in international format (digits only: 91 + 8610808937)
+  whatsappNumber: '918610808937',
+  displayPhone: '+91 86108 08937',
 
-  // Configurable Email Address
-  email: 'YOUR_EMAIL@example.com',
+  // Email Address
+  email: 'balapraveen246@gmail.com',
 
-  // Configurable Location/Availability
+  // Location & Availability
   location: 'Tamil Nadu, India',
   statusText: 'Available for Freelance Projects',
   isAvailableForWork: true,
 
-  // Social Profile URLs (Real public URLs only)
+  // Social Profile URLs
   socials: {
     github: 'https://github.com/balapraveen246-dot',
-    // Add LinkedIn, Twitter, etc., here when ready
-    linkedin: null,
+    linkedin: 'https://www.linkedin.com/in/praveenrdsafs',
     twitter: null,
   },
 
@@ -38,7 +32,6 @@ export const CONTACT_CONFIG = {
     const message = customMessage || CONTACT_CONFIG.defaultWhatsAppMessage;
     const encoded = encodeURIComponent(message);
     
-    // If the placeholder hasn't been replaced yet, warn or provide fallback
     if (!number || number === 'YOUR_WHATSAPP_NUMBER') {
       return `https://wa.me/?text=${encoded}`;
     }

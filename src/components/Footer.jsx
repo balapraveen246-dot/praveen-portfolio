@@ -8,6 +8,12 @@ const GithubIcon = ({ className = "w-5 h-5" }) => (
   </svg>
 );
 
+const LinkedInIcon = ({ className = "w-5 h-5" }) => (
+  <svg className={`${className} fill-current`} viewBox="0 0 24 24">
+    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.7a1.63 1.63 0 1 0 1.63 1.63A1.63 1.63 0 0 0 7.86 6.7z" />
+  </svg>
+);
+
 const NAV_LINKS = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
@@ -82,6 +88,18 @@ export default function Footer() {
                 aria-label="GitHub Profile"
               >
                 <GithubIcon className="w-5 h-5" />
+              </a>
+            )}
+
+            {CONTACT_CONFIG.socials.linkedin && (
+              <a
+                href={CONTACT_CONFIG.socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-xl bg-bg-subtle border border-border-subtle hover:border-gold/40 flex items-center justify-center text-text-secondary hover:text-[#0A66C2] transition-colors"
+                aria-label="LinkedIn Profile"
+              >
+                <LinkedInIcon className="w-5 h-5" />
               </a>
             )}
 

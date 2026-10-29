@@ -47,17 +47,19 @@ Open [`src/data/config.js`](file:///C:/Users/balap/.gemini/antigravity/scratch/p
 
 ```javascript
 export const CONTACT_CONFIG = {
-  // Replace with your real phone number in international format, digits only (India starts with 91)
-  whatsappNumber: '91XXXXXXXXXX',
+  // WhatsApp number in international format
+  whatsappNumber: '918610808937',
+  displayPhone: '+91 86108 08937',
 
-  // Replace with your active contact email address
-  email: 'yourname@example.com',
+  // Active contact email address
+  email: 'balapraveen246@gmail.com',
 
-  // Real GitHub profile URL
+  // Socials
   socials: {
     github: 'https://github.com/balapraveen246-dot',
-    linkedin: null, // Add your profile URL when ready
+    linkedin: 'https://www.linkedin.com/in/praveenrdsafs',
   },
+
   
   // Set to false if you are temporarily unavailable for freelance projects
   isAvailableForWork: true,

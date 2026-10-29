@@ -161,8 +161,13 @@ ${formData.requirements || 'Looking forward to discussing project details.'}`;
                 <p className="text-xs uppercase tracking-wider text-text-muted mb-1 font-semibold">
                   WhatsApp Direct
                 </p>
+                <div className="flex items-center justify-between gap-2 mb-1.5">
+                  <span className="text-sm font-mono text-emerald-400 font-bold">
+                    {CONTACT_CONFIG.displayPhone || '+91 86108 08937'}
+                  </span>
+                </div>
                 <p className="text-xs text-text-secondary mb-2">
-                  Quickest way to get quotes and project feedback.
+                  Quickest way to get quotes and discuss requirements.
                 </p>
                 <a
                   href={directChatUrl}
@@ -170,21 +175,42 @@ ${formData.requirements || 'Looking forward to discussing project details.'}`;
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300"
                 >
-                  <span>Open WhatsApp conversation</span>
+                  <span>Chat on WhatsApp</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
 
-              {/* Instructions Callout */}
-              {CONTACT_CONFIG.whatsappNumber === 'YOUR_WHATSAPP_NUMBER' && (
-                <div className="p-3.5 rounded-xl bg-amber-950/30 border border-amber-800/50 flex items-start gap-2.5 text-xs text-amber-300/90 leading-relaxed">
-                  <ShieldAlert className="w-4 h-4 flex-shrink-0 mt-0.5 text-amber-400" />
-                  <div>
-                    <span className="font-semibold block text-amber-200">Owner Setup Reminder:</span>
-                    Update your real WhatsApp number and email in <code>src/data/config.js</code> so inquiries reach your phone and inbox directly.
-                  </div>
+              {/* LinkedIn & GitHub Card */}
+              <div className="p-4 rounded-xl bg-bg-subtle/70 border border-border-subtle">
+                <p className="text-xs uppercase tracking-wider text-text-muted mb-2 font-semibold">
+                  Professional Profiles
+                </p>
+                <div className="flex flex-col gap-2">
+                  {CONTACT_CONFIG.socials.linkedin && (
+                    <a
+                      href={CONTACT_CONFIG.socials.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-between text-xs text-text-secondary hover:text-[#0A66C2] transition-colors p-2 rounded-lg bg-bg-card border border-border-subtle/70"
+                    >
+                      <span className="font-medium">LinkedIn Profile</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  )}
+
+                  {CONTACT_CONFIG.socials.github && (
+                    <a
+                      href={CONTACT_CONFIG.socials.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-between text-xs text-text-secondary hover:text-text-main transition-colors p-2 rounded-lg bg-bg-card border border-border-subtle/70"
+                    >
+                      <span className="font-medium">GitHub Repository</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  )}
                 </div>
-              )}
+              </div>
             </div>
           </motion.div>
 
