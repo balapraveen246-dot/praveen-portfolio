@@ -83,7 +83,7 @@ All projects are centralized in [`src/data/projectsData.js`](file:///C:/Users/ba
 - **Nostra**: Frontend fashion store currently marked as *In Progress / Coming Soon*
 - **Weather Report**: Live Vercel app
 - **BulkMail**: Live Vercel app
-- **Grand Horizon**: Verified as *Demo Unavailable (404)* per instructions. When your live URL is active, update `liveUrl` and change `status: 'Live'`.
+- **Grand Horizon**: Live Vercel app (Hotel Booking & Resort Interface)
 - **Medical Website**: Live Vercel app
 
 ---
