@@ -26,8 +26,8 @@ const TRUST_ITEMS = [
 
 export default function TrustStrip() {
   return (
-    <section id="trust" className="border-y border-border-subtle bg-bg-card/40 py-6 sm:py-8 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="trust" className="border-y border-border-subtle bg-bg-card/40 py-6 sm:py-8 backdrop-blur-sm w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {TRUST_ITEMS.map((item, idx) => {
             const Icon = item.icon;

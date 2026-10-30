@@ -44,8 +44,8 @@ export default function Projects() {
   });
 
   return (
-    <section id="projects" className="py-20 lg:py-28 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 lg:py-28 relative overflow-hidden w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -63,10 +63,10 @@ export default function Projects() {
           </div>
 
           {/* Quick Filter Controls */}
-          <div className="flex items-center gap-1.5 p-1 bg-bg-card border border-border-subtle rounded-xl self-start md:self-auto">
+          <div className="flex flex-wrap items-center gap-1.5 p-1 bg-bg-card border border-border-subtle rounded-xl self-start md:self-auto max-w-full">
             <button
               onClick={() => setFilter('all')}
-              className={`px-3.5 py-1.5 text-xs sm:text-sm font-medium rounded-lg transition-colors ${
+              className={`px-3 sm:px-3.5 py-1.5 text-xs sm:text-sm font-medium rounded-lg transition-colors ${
                 filter === 'all'
                   ? 'bg-gold text-bg-main font-semibold'
                   : 'text-text-secondary hover:text-text-main'
@@ -76,7 +76,7 @@ export default function Projects() {
             </button>
             <button
               onClick={() => setFilter('live')}
-              className={`px-3.5 py-1.5 text-xs sm:text-sm font-medium rounded-lg transition-colors ${
+              className={`px-3 sm:px-3.5 py-1.5 text-xs sm:text-sm font-medium rounded-lg transition-colors ${
                 filter === 'live'
                   ? 'bg-gold text-bg-main font-semibold'
                   : 'text-text-secondary hover:text-text-main'
@@ -86,7 +86,7 @@ export default function Projects() {
             </button>
             <button
               onClick={() => setFilter('progress')}
-              className={`px-3.5 py-1.5 text-xs sm:text-sm font-medium rounded-lg transition-colors ${
+              className={`px-3 sm:px-3.5 py-1.5 text-xs sm:text-sm font-medium rounded-lg transition-colors ${
                 filter === 'progress'
                   ? 'bg-gold text-bg-main font-semibold'
                   : 'text-text-secondary hover:text-text-main'
@@ -100,7 +100,7 @@ export default function Projects() {
         {/* Projects Grid */}
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full"
         >
           <AnimatePresence>
             {filteredProjects.map((project) => {
@@ -118,10 +118,10 @@ export default function Projects() {
                   viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.5 }}
                   whileHover={{ y: -6 }}
-                  className="group relative rounded-2xl bg-bg-card border border-border-subtle hover:border-gold/50 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-xl hover:shadow-gold-sm"
+                  className="group relative rounded-2xl bg-bg-card border border-border-subtle hover:border-gold/50 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-xl hover:shadow-gold-sm w-full min-w-0"
                 >
                   {/* Card Visual Header Mockup */}
-                  <div className={`relative h-48 bg-gradient-to-br ${project.gradient} p-5 border-b border-border-subtle flex flex-col justify-between overflow-hidden`}>
+                  <div className={`relative h-48 bg-gradient-to-br ${project.gradient} p-4 sm:p-5 border-b border-border-subtle flex flex-col justify-between overflow-hidden`}>
                     
                     {/* Mock Browser Header Dots */}
                     <div className="flex items-center justify-between">
@@ -136,18 +136,18 @@ export default function Projects() {
                     </div>
 
                     {/* Visual Centerpiece */}
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 min-w-0">
                       <div
-                        className="w-12 h-12 rounded-xl flex items-center justify-center bg-bg-card/90 border border-border-subtle shadow-md"
+                        className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center bg-bg-card/90 border border-border-subtle shadow-md flex-shrink-0"
                         style={{ color: project.accentColor }}
                       >
-                        <IconComponent className="w-6 h-6" />
+                        <IconComponent className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
-                      <div>
-                        <span className="text-xs uppercase tracking-wider text-text-muted font-mono block">
+                      <div className="min-w-0 flex-1">
+                        <span className="text-xs uppercase tracking-wider text-text-muted font-mono block truncate">
                           {project.category}
                         </span>
-                        <h3 className="text-lg font-bold text-text-main group-hover:text-gold transition-colors">
+                        <h3 className="text-base sm:text-lg font-bold text-text-main group-hover:text-gold transition-colors truncate">
                           {project.name}
                         </h3>
                       </div>

@@ -12,12 +12,12 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-bg-main text-text-main flex flex-col selection:bg-gold selection:text-black">
+    <div className="min-h-screen w-full bg-bg-main text-text-main flex flex-col selection:bg-gold selection:text-black overflow-x-hidden">
       {/* Sticky Navigation */}
       <Navbar />
 
       {/* Main Content Sections */}
-      <main className="flex-1">
+      <main className="flex-1 w-full overflow-x-hidden">
         <Hero />
         <TrustStrip />
         <About />

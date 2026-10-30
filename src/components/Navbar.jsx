@@ -59,13 +59,13 @@ export default function Navbar() {
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex items-center justify-between gap-3 w-full">
           {/* Logo */}
           <a
             href="#home"
             onClick={(e) => handleLinkClick(e, '#home')}
-            className="group flex items-center gap-2 text-text-main font-extrabold tracking-wider text-lg sm:text-xl"
+            className="group flex items-center gap-2 text-text-main font-extrabold tracking-wider text-base sm:text-lg lg:text-xl flex-shrink-0"
             aria-label="Praveen Dev Portfolio Home"
           >
             <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-bg-card border border-gold/40 text-gold group-hover:border-gold transition-colors duration-200">
@@ -77,7 +77,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 lg:gap-2 bg-bg-card/70 border border-border-subtle/70 px-4 py-1.5 rounded-full backdrop-blur-sm">
+          <nav className="hidden lg:flex items-center gap-1.5 lg:gap-2 bg-bg-card/70 border border-border-subtle/70 px-4 py-1.5 rounded-full backdrop-blur-sm">
             {NAV_LINKS.map((link) => {
               const isActive = activeSection === link.href.substring(1);
               return (
@@ -105,7 +105,7 @@ export default function Navbar() {
           </nav>
 
           {/* Right Action: Let's Talk CTA */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <a
               href="#contact"
               onClick={(e) => handleLinkClick(e, '#contact')}
@@ -116,18 +116,18 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center gap-2">
+          {/* Mobile & Tablet Menu Button */}
+          <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 flex-shrink-0">
             <a
               href="#contact"
               onClick={(e) => handleLinkClick(e, '#contact')}
-              className="px-3 py-1.5 text-xs font-semibold rounded-md text-bg-main bg-gold hover:bg-gold-hover transition-colors"
+              className="px-2.5 sm:px-3 py-1.5 text-xs font-semibold rounded-md text-bg-main bg-gold hover:bg-gold-hover transition-colors whitespace-nowrap"
             >
               Let's Talk
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg bg-bg-card border border-border-subtle text-text-secondary hover:text-text-main focus:outline-none focus:ring-2 focus:ring-gold/50"
+              className="p-2 rounded-lg bg-bg-card border border-border-subtle text-text-secondary hover:text-text-main focus:outline-none focus:ring-2 focus:ring-gold/50 flex-shrink-0"
               aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
               aria-expanded={mobileMenuOpen}
             >
@@ -137,7 +137,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile & Tablet Dropdown Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -145,7 +145,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden border-b border-border-subtle bg-bg-card/95 backdrop-blur-xl px-4 pt-3 pb-6 shadow-2xl"
+            className="lg:hidden border-b border-border-subtle bg-bg-card/95 backdrop-blur-xl px-4 pt-3 pb-6 shadow-2xl"
           >
             <div className="flex flex-col space-y-1">
               {NAV_LINKS.map((link) => {

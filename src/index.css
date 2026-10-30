@@ -3,15 +3,35 @@
 @tailwind utilities;
 
 @layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   html {
     scroll-behavior: smooth;
     color-scheme: dark;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   body {
     background-color: #09090B;
     color: #F5F5F5;
+    max-width: 100%;
     overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    max-width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  img, svg, video, canvas, audio, iframe, embed, object {
+    max-width: 100%;
   }
 
   /* Custom subtle dark scrollbar */

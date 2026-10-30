@@ -66,11 +66,11 @@ ${formData.requirements || 'Looking forward to discussing project details.'}`;
   );
 
   return (
-    <section id="contact" className="py-20 lg:py-28 relative">
+    <section id="contact" className="py-20 lg:py-28 relative overflow-hidden w-full">
       {/* Background Ambient Glow */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-gold/5 rounded-full blur-[150px] pointer-events-none -z-10" />
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-[500px] h-[350px] bg-gold/5 rounded-full blur-[150px] pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 lg:mb-16">
@@ -116,27 +116,27 @@ ${formData.requirements || 'Looking forward to discussing project details.'}`;
           
           {/* Left Column: Direct Contact Details & Config Warning */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-5 space-y-6"
+            className="lg:col-span-5 space-y-6 w-full min-w-0"
           >
-            <div className="p-6 rounded-2xl bg-bg-card border border-border-subtle space-y-5">
+            <div className="p-5 sm:p-6 rounded-2xl bg-bg-card border border-border-subtle space-y-5">
               <h3 className="text-lg font-bold text-text-main flex items-center gap-2">
                 <Mail className="w-5 h-5 text-gold" />
                 <span>Direct Contact Options</span>
               </h3>
 
               {/* Email Card */}
-              <div className="p-4 rounded-xl bg-bg-subtle/70 border border-border-subtle">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-bg-subtle/70 border border-border-subtle min-w-0">
                 <p className="text-xs uppercase tracking-wider text-text-muted mb-1 font-semibold">
                   Email Address
                 </p>
-                <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center justify-between gap-2 min-w-0">
                   <a
                     href={`mailto:${CONTACT_CONFIG.email}`}
-                    className="text-sm font-mono text-gold hover:underline truncate"
+                    className="text-xs sm:text-sm font-mono text-gold hover:underline truncate min-w-0 flex-1"
                   >
                     {CONTACT_CONFIG.email}
                   </a>
@@ -216,13 +216,13 @@ ${formData.requirements || 'Looking forward to discussing project details.'}`;
 
           {/* Right Column: Honest Direct Inquiry Composer */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-7"
+            className="lg:col-span-7 w-full min-w-0"
           >
-            <div className="p-6 sm:p-8 rounded-2xl bg-bg-card border border-border-subtle shadow-xl">
+            <div className="p-5 sm:p-8 rounded-2xl bg-bg-card border border-border-subtle shadow-xl w-full min-w-0">
               <div className="mb-6">
                 <h3 className="text-xl font-bold text-text-main">
                   Describe Your Project

@@ -29,8 +29,8 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-20 lg:py-28 relative bg-bg-card/40 border-y border-border-subtle/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 lg:py-28 relative overflow-hidden bg-bg-card/40 border-y border-border-subtle/80 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12 lg:mb-16">
@@ -47,7 +47,7 @@ export default function Services() {
         </div>
 
         {/* Services 4-Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 w-full">
           {servicesData.map((service, index) => {
             const Icon = ICON_MAP[service.icon] || Briefcase;
 
@@ -59,7 +59,7 @@ export default function Services() {
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="group relative p-7 sm:p-8 rounded-2xl bg-bg-card border border-border-subtle hover:border-gold/50 transition-all duration-300 flex flex-col justify-between shadow-xl hover:shadow-gold-sm"
+                className="group relative p-5 sm:p-8 rounded-2xl bg-bg-card border border-border-subtle hover:border-gold/50 transition-all duration-300 flex flex-col justify-between shadow-xl hover:shadow-gold-sm w-full min-w-0"
               >
                 <div>
                   {/* Top Bar with Icon & Badge */}

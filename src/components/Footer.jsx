@@ -39,8 +39,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-border-subtle bg-bg-card/80 pt-12 pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="border-t border-border-subtle bg-bg-card/80 pt-12 pb-8 w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-border-subtle/60">
           

@@ -12,8 +12,8 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-20 lg:py-28 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 lg:py-28 relative overflow-hidden w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12 lg:mb-16">
@@ -27,15 +27,15 @@ export default function About() {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center w-full">
           
           {/* Left Column: Authentic Bio & Philosophy */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 space-y-6 text-base sm:text-lg text-text-secondary leading-relaxed"
+            className="lg:col-span-7 space-y-6 text-base sm:text-lg text-text-secondary leading-relaxed w-full min-w-0"
           >
             <p className="text-text-main font-medium text-lg sm:text-xl">
               Hi, I'm Praveen — a MERN Stack Developer passionate about building modern, responsive, and user-friendly websites.
@@ -77,11 +77,11 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="lg:col-span-5"
+            className="lg:col-span-5 w-full min-w-0"
           >
-            <div className="rounded-2xl bg-bg-card border border-border-subtle overflow-hidden shadow-xl">
+            <div className="rounded-2xl bg-bg-card border border-border-subtle overflow-hidden shadow-xl w-full">
               {/* Terminal Title Bar */}
               <div className="bg-bg-subtle/80 px-4 py-3 border-b border-border-subtle flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -97,38 +97,38 @@ export default function About() {
               </div>
 
               {/* Code Snippet Content */}
-              <div className="p-5 sm:p-6 font-mono text-xs sm:text-sm leading-relaxed text-text-secondary space-y-3 bg-bg-card">
+              <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm leading-relaxed text-text-secondary space-y-2.5 sm:space-y-3 bg-bg-card overflow-x-auto max-w-full">
                 <div>
                   <span className="text-purple-400">const</span>{' '}
                   <span className="text-gold">developer</span> = &#123;
                 </div>
-                <div className="pl-4">
+                <div className="pl-3 sm:pl-4">
                   <span className="text-text-muted">name:</span>{' '}
                   <span className="text-emerald-400">'Praveen'</span>,
                 </div>
-                <div className="pl-4">
+                <div className="pl-3 sm:pl-4 break-words">
                   <span className="text-text-muted">role:</span>{' '}
                   <span className="text-emerald-400">'MERN Stack & Freelance Web Dev'</span>,
                 </div>
-                <div className="pl-4">
+                <div className="pl-3 sm:pl-4 break-words">
                   <span className="text-text-muted">coreFocus:</span> [
                   <span className="text-amber-300">'Clean UI'</span>,{' '}
                   <span className="text-amber-300">'Fast Performance'</span>,{' '}
                   <span className="text-amber-300">'Mobile Responsive'</span>
                   ],
                 </div>
-                <div className="pl-4">
+                <div className="pl-3 sm:pl-4 break-words">
                   <span className="text-text-muted">pricingPhilosophy:</span>{' '}
                   <span className="text-emerald-400">'Budget-friendly & Transparent'</span>,
                 </div>
-                <div className="pl-4">
+                <div className="pl-3 sm:pl-4 break-words">
                   <span className="text-text-muted">clientFocus:</span> [
                   <span className="text-amber-300">'Students'</span>,{' '}
                   <span className="text-amber-300">'Freelancers'</span>,{' '}
                   <span className="text-amber-300">'Small Businesses'</span>
                   ],
                 </div>
-                <div className="pl-4">
+                <div className="pl-3 sm:pl-4">
                   <span className="text-text-muted">readyToBuild:</span>{' '}
                   <span className="text-cyan-400">true</span>
                 </div>

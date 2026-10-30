@@ -33,40 +33,40 @@ export default function PricingQuote() {
   return (
     <section className="py-20 lg:py-24 relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-80 h-80 bg-gold/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[400px] h-80 bg-gold/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Banner Card */}
-        <div className="relative rounded-3xl bg-gradient-to-b from-bg-card to-bg-main border border-gold/30 p-8 sm:p-12 lg:p-16 shadow-2xl overflow-hidden">
+        <div className="relative rounded-3xl bg-gradient-to-b from-bg-card to-bg-main border border-gold/30 p-5 sm:p-10 lg:p-16 shadow-2xl overflow-hidden w-full min-w-0">
           
           {/* Subtle Ambient Gold Line */}
           <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center w-full">
             
             {/* Left Column: Heading, Supporting Text & CTAs */}
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-7 w-full min-w-0">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-gold/10 text-gold border border-gold/30 mb-4">
                 <Sparkles className="w-3.5 h-3.5" />
                 TRANSPARENT & TAILORED
               </span>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-text-main tracking-tight leading-tight mb-4">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-text-main tracking-tight leading-tight mb-4 break-words">
                 Transparent Pricing, <span className="gold-gradient-text">Tailored to You</span>
               </h2>
 
-              <p className="text-base sm:text-lg text-text-secondary leading-relaxed mb-8 max-w-xl">
+              <p className="text-sm sm:text-lg text-text-secondary leading-relaxed mb-8 max-w-xl">
                 Every project is different. Tell me what you need, and I'll suggest a solution that fits your requirements and budget.
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full">
                 <a
                   href={quoteUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-bold text-bg-main bg-gold hover:bg-gold-hover transition-all duration-200 shadow-gold-sm hover:shadow-gold-md hover:-translate-y-0.5 active:translate-y-0 text-center"
+                  className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl font-bold text-bg-main bg-gold hover:bg-gold-hover transition-all duration-200 shadow-gold-sm hover:shadow-gold-md hover:-translate-y-0.5 active:translate-y-0 text-center text-sm sm:text-base"
                 >
                   <MessageSquare className="w-4 h-4" />
                   <span>Get a Free Quote</span>
@@ -76,7 +76,7 @@ export default function PricingQuote() {
                   href={discussUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-text-main bg-bg-card hover:bg-bg-subtle border border-border-subtle hover:border-gold/50 transition-all duration-200 text-center"
+                  className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl font-semibold text-text-main bg-bg-card hover:bg-bg-subtle border border-border-subtle hover:border-gold/50 transition-all duration-200 text-center text-sm sm:text-base"
                 >
                   <span>Discuss Your Project</span>
                   <ArrowRight className="w-4 h-4 text-gold" />
@@ -91,7 +91,7 @@ export default function PricingQuote() {
             </div>
 
             {/* Right Column: 3-Step Simple Process */}
-            <div className="lg:col-span-5 space-y-4">
+            <div className="lg:col-span-5 space-y-4 w-full min-w-0">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">
                 How It Works:
               </h3>
